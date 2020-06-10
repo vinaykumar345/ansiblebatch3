@@ -1,0 +1,9 @@
+- hosts: centos
+  tasks:
+  - name: print some value
+    debug:
+    with_nested: 
+    - [ 'training', 'lab', 'handson']
+    - [ 1, 2, 3]
+    - [ 'good', 'bad', 'great']
+

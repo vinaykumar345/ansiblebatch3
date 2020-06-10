@@ -1,0 +1,16 @@
+- hosts: linux
+  become: yes
+  tasks:
+  - name: create multiple directory
+    file:
+      path: "{{ item }}"
+      state: directory
+      mode: 0755
+      user: ansible
+      group: root
+    with_items:
+    - /home/ansible/folder1
+    - /home/ansible/folder2
+    - /home/ansible/folder3
+    
+
